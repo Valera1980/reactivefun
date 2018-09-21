@@ -18,7 +18,7 @@ export class ChildComponent implements OnInit,OnDestroy {
   ngOnInit() {
     this.subjectForChild.subscribe(data => {
     console.log('TCL: ChildComponent -> ngOnInit -> data', data);
-    console.log('TCL: ChildComponent -> ngOnInit -> dyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyata', data);
+    console.log('TCL: ChildComponent -> ngOnInit -> dyyyyyyyyyyyyyyyyyyyyyyyyjljljllyyyyyyyyata', data);
       
     })
   }
