@@ -1,0 +1,11 @@
+<p>
+  parent works!
+  <app-child
+  (toParentEvent)="fromChild($event)"
+  [subjectForChild]="subjectForChild"
+  ></app-child>
+<br>
+{{fromChildEvent}}
+</p>
+<button (click)="toChild($event)">to child</button>
+
