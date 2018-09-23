@@ -20,7 +20,7 @@ export class ParentComponent implements OnInit {
     this.fromChildEvent = event;
   }
 
-  toChild(){
+  toChild(event){
     this.subjectForChild.next('nnnnnnnnnnnnnnnnnnnnnnnnnnn');
   }
 
