@@ -15,7 +15,8 @@ import { TranslateComponent } from './translate/translate.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http,'../../lang/','.json');
+  return new TranslateHttpLoader(http,'../lang/','.json');
+  // return new TranslateHttpLoader(http);
 }
 
 
