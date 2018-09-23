@@ -11,13 +11,14 @@ import { ChildComponent } from './child/child.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { TranslateComponent } from './translate/translate.component';
+import { CustomLoader } from './custom-loader';
 
 
 // AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http,'../lang/','.json');
+//export function HttpLoaderFactory(http: HttpClient) {
+  //return new TranslateHttpLoader(http,'../lang/','.json');
   // return new TranslateHttpLoader(http);
-}
+//}
 
 
 @NgModule({
@@ -35,8 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       loader:{
         provide : TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps:[ HttpClient ]
+        useClass: CustomLoader
+        // useFactory: HttpLoaderFactory,
+        // deps:[ HttpClient ]
       }
     })
   ],
